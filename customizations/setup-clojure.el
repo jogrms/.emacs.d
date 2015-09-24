@@ -2,6 +2,10 @@
 ;; Clojure
 ;;;;
 
+;; Auto-indent
+(add-hook 'clojure-mode-hook
+          '(lambda () (local-set-key (kbd "RET") 'newline-and-indent)))
+
 ;; Enable paredit for Clojure
 (add-hook 'clojure-mode-hook 'enable-paredit-mode)
 
