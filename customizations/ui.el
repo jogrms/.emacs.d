@@ -9,6 +9,9 @@
 
 ;; Show line numbers
 (global-linum-mode)
+(setq-default linum-format "%d ")
+(setq-default show-trailing-whitespace t)
+(put 'downcase-region 'disabled nil)
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
 ;; awhile, you won't need the toolbar.
