@@ -9,7 +9,7 @@
 (add-to-list 'package-archives
              '("tromey" . "http://tromey.com/elpa/") t)
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
 ;;                          ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -70,7 +70,8 @@
 
     php-mode
     web-mode
-    markdown-mode))
+    markdown-mode+
+    less-css-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
