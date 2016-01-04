@@ -72,7 +72,8 @@
     web-mode
     markdown-mode+
     less-css-mode
-    puppet-mode))
+    puppet-mode
+    yaml-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
