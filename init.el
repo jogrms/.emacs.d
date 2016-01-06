@@ -68,7 +68,6 @@
     ;; git integration
     magit
 
-    php-mode
     web-mode
     markdown-mode+
     less-css-mode
@@ -136,5 +135,6 @@
 
 ;; Langauage-specific
 (load "setup-clojure.el")
-(load "setup-js.el")
 
+;; web-mode config for js, jsx, php, tpl, twig.
+(load "setup-web-mode.el")
