@@ -20,7 +20,4 @@
             (set-face-attribute 'web-mode-html-tag-face nil :foreground "Pink3")))
 
 ;; PHP
-(add-to-list 'auto-mode-alist '("\\.php$" . web-mode))
-
-;; .tpl
-(add-to-list 'auto-mode-alist '("\\.tpl$" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(php\\|tpl\\|phtml\\)\\'" . web-mode))
