@@ -73,7 +73,8 @@
     less-css-mode
     puppet-mode
     yaml-mode
-    apache-mode))
+    apache-mode
+    actionscript-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
