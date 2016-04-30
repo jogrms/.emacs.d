@@ -142,3 +142,9 @@
 
 ;; web-mode config for js, jsx, php, tpl, twig.
 (load "setup-web-mode.el")
+
+;; Sass
+(load "setup-sass.el")
+
+;; SQL
+(load "setup-sql.el")
