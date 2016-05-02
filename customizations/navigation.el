@@ -60,3 +60,9 @@
 ;; projectile everywhere!
 (projectile-global-mode)
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
+
+;; Navigate windows with arrow keys
+(global-set-key (kbd "C-x <up>") 'windmove-up)
+(global-set-key (kbd "C-x <down>") 'windmove-down)
+(global-set-key (kbd "C-x <right>") 'windmove-right)
+(global-set-key (kbd "C-x <left>") 'windmove-left)
