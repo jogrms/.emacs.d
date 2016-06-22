@@ -1,5 +1,5 @@
 ;; JS/JSX
-(add-to-list 'auto-mode-alist '("\\.\\(js[x]?\\|json\\)\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(js[x]?\\|json\\|html\\)\\'" . web-mode))
 (setq web-mode-content-types-alist '(("jsx" . "\\.js[x]?\\'")))
 
 (defadvice web-mode-highlight-part (around tweak-jsx activate)
@@ -14,6 +14,7 @@
             (setq web-mode-markup-indent-offset 2)
             (setq web-mode-css-indent-offset 2)
             (setq web-mode-attr-indent-offset 2)
+            (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
 
             (setq web-mode-comment-style 2)
 
