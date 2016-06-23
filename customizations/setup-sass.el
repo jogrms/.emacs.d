@@ -1,1 +1,2 @@
-(add-to-list 'auto-mode-alist '("\\.\\(sass\\|scss\\)\\'" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.sass\\'" . sass-mode))
+(add-to-list 'auto-mode-alist '("\\.scss\\'" . scss-mode))
