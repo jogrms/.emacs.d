@@ -8,17 +8,32 @@
         ad-do-it)
     ad-do-it))
 
-(add-hook 'web-mode-hook
-          (lambda ()
-            (setq web-mode-code-indent-offset 4)
-            (setq web-mode-markup-indent-offset 4)
-            (setq web-mode-css-indent-offset 4)
-            (setq web-mode-attr-indent-offset 4)
-            (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
+(defun set-indent-offset (offset)
+  (setq web-mode-code-indent-offset offset)
+  (setq web-mode-markup-indent-offset offset)
+  (setq web-mode-css-indent-offset offset)
+  (setq web-mode-attr-indent-offset offset))
 
-            (setq web-mode-comment-style 2)
+(defun hook-common ()
+  (add-to-list 'web-mode-indentation-params '("lineup-calls" . nil))
+  (setq web-mode-comment-style 2)
+  (set-face-attribute 'web-mode-html-tag-face nil :foreground "Pink3"))
 
-            (set-face-attribute 'web-mode-html-tag-face nil :foreground "Pink3")))
+(defun hook-default ()
+  (hook-common)
+  (set-indent-offset 2))
+
+(defun hook-tt ()
+  (hook-common)
+  (set-indent-offset 4))
+
+(defun hook-root ()
+  (let ((file-name (buffer-file-name)))
+    (cond
+     ((string-match "/tt/website/" file-name) (hook-tt))
+     (t (hook-default)))))
+
+(add-hook 'web-mode-hook 'hook-root)
 
 ;; JSON
 (add-to-list 'auto-mode-alist '("\\.eslintrc\\'" . web-mode))
