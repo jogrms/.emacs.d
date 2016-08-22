@@ -69,6 +69,7 @@
     magit
 
     web-mode
+    go-mode
     markdown-mode+
     less-css-mode
     puppet-mode
