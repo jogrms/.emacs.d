@@ -38,6 +38,3 @@
 ;; JSON
 (add-to-list 'auto-mode-alist '("\\.eslintrc\\'" . web-mode))
 (setq web-mode-content-types-alist '(("json" . "\\.eslintrc\\'")))
-
-;; PHP
-(add-to-list 'auto-mode-alist '("\\.\\(php\\|tpl\\|phtml\\)\\'" . web-mode))
