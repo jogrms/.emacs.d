@@ -155,3 +155,6 @@
 
 ;; Thrift
 (load "setup-thrift.el")
+
+;; Go
+(load "setup-go.el")
