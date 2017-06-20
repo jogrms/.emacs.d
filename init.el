@@ -68,6 +68,8 @@
     ;; git integration
     magit
 
+    github-browse-file
+    scala-mode
     thrift
     web-mode
     php-mode
