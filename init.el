@@ -75,14 +75,10 @@
     php-mode
     go-mode
     markdown-mode+
-    less-css-mode
     puppet-mode
     yaml-mode
     apache-mode
-    actionscript-mode
-    csharp-mode
-    scss-mode
-    sass-mode))
+    scss-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
 ;; interface will have a different environment than a shell in a
