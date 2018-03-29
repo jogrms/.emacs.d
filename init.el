@@ -68,6 +68,7 @@
     ;; git integration
     magit
 
+    groovy-mode
     github-browse-file
     scala-mode
     thrift
@@ -154,5 +155,22 @@
 ;; Thrift
 (load "setup-thrift.el")
 
+;; Groovy / Jenkins pipeline
+(load "setup-groovy.el")
+
 ;; Go
 (load "setup-go.el")
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (yaml-mode web-mode thrift tagedit smex scss-mode scala-mode rainbow-delimiters puppet-mode projectile php-mode paredit markdown-mode+ magit ido-ubiquitous go-mode github-browse-file exec-path-from-shell clojure-mode-extra-font-locking cider apache-mode))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
