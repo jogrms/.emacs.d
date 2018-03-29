@@ -60,6 +60,7 @@
 ;; projectile everywhere!
 (projectile-global-mode)
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
+(setq projectile-enable-caching t)
 
 ;; Navigate windows with arrow keys
 (global-set-key (kbd "C-x <up>") 'windmove-up)
