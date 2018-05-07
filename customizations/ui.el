@@ -10,7 +10,30 @@
 ;; Show line numbers
 (global-linum-mode)
 (setq-default linum-format "%d ")
+(set-face-foreground 'linum "color-237")
+
+;; Window borders
+(add-hook 'window-configuration-change-hook
+  (lambda ()
+    (let ((display-table (or buffer-display-table
+			     standard-display-table
+			     (make-display-table))))
+      (set-display-table-slot display-table 5 ?│)
+      (set-window-display-table (selected-window) display-table)
+      (set-face-background 'vertical-border "black")
+      (set-face-foreground 'vertical-border "color-244"))))
+
+
+;; Auto-dim other buffers
+(add-hook 'after-init-hook
+  (lambda ()
+    (when (fboundp 'auto-dim-other-buffers-mode)
+      (auto-dim-other-buffers-mode t))))
+
+;; Show trailing whitespace
 (setq-default show-trailing-whitespace t)
+
+;; Enable downcase-region
 (put 'downcase-region 'disabled nil)
 
 ;; You can uncomment this to remove the graphical toolbar at the top. After
