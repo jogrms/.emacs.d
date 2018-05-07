@@ -23,13 +23,6 @@
       (set-face-background 'vertical-border "black")
       (set-face-foreground 'vertical-border "color-244"))))
 
-
-;; Auto-dim other buffers
-(add-hook 'after-init-hook
-  (lambda ()
-    (when (fboundp 'auto-dim-other-buffers-mode)
-      (auto-dim-other-buffers-mode t))))
-
 ;; Show trailing whitespace
 (setq-default show-trailing-whitespace t)
 
