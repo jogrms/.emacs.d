@@ -158,6 +158,9 @@
 ;; Groovy / Jenkins pipeline
 (load "setup-groovy.el")
 
+;; Octave / matlab
+(load "setup-octave.el")
+
 ;; Go
 (load "setup-go.el")
 (custom-set-variables
