@@ -9,3 +9,6 @@ projectile.cache
 auto-save-list
 backups
 elpa
+bookmarks
+network-security.data
+tramp

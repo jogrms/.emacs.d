@@ -42,10 +42,6 @@
 ;; open now
 (setq ido-use-virtual-buffers t)
 
-;; This enables ido in all contexts where it could be useful, not just
-;; for selecting buffer and file names
-(ido-ubiquitous-mode 1)
-
 ;; Shows a list of buffers
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 
@@ -61,6 +57,7 @@
 (projectile-global-mode)
 (add-to-list 'projectile-globally-ignored-directories "node_modules")
 (setq projectile-enable-caching t)
+(setq projectile-keymap-prefix (kbd "C-c p"))
 
 ;; Navigate windows with arrow keys
 (global-set-key (kbd "C-x <up>") 'windmove-up)

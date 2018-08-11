@@ -35,29 +35,10 @@
     ;; Cheatsheet: http://www.emacswiki.org/emacs/PareditCheatsheet
     paredit
 
-    ;; key bindings and code colorization for Clojure
-    ;; https://github.com/clojure-emacs/clojure-mode
-    clojure-mode
-
-    ;; extra syntax highlighting for clojure
-    clojure-mode-extra-font-locking
-
-    ;; integration with a Clojure REPL
-    ;; https://github.com/clojure-emacs/cider
-    cider
-
-    ;; allow ido usage in as many contexts as possible. see
-    ;; customizations/navigation.el line 23 for a description
-    ;; of ido
-    ido-ubiquitous
-
     ;; Enhances M-x to allow easier execution of commands. Provides
     ;; a filterable list of possible commands in the minibuffer
     ;; http://www.emacswiki.org/emacs/Smex
     smex
-
-    ;; project navigation
-    projectile
 
     ;; colorful parenthesis matching
     rainbow-delimiters
@@ -68,17 +49,10 @@
     ;; git integration
     magit
 
-    groovy-mode
     github-browse-file
-    scala-mode
-    thrift
     web-mode
-    php-mode
-    go-mode
     markdown-mode+
-    puppet-mode
     yaml-mode
-    apache-mode
     scss-mode))
 
 ;; On OS X, an Emacs instance started from the graphical user
@@ -96,7 +70,6 @@
   (when (not (package-installed-p p))
     (package-install p)))
 
-
 ;; Place downloaded elisp files in ~/.emacs.d/vendor. You'll then be able
 ;; to load them.
 ;;
@@ -110,6 +83,8 @@
 ;; a .yml file
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
+(add-to-list 'load-path "~/.emacs.d/lib/projectile")
+(load "projectile.el")
 
 ;;;;
 ;; Customization
@@ -140,9 +115,6 @@
 ;; For editing lisps
 (load "elisp-editing.el")
 
-;; Langauage-specific
-(load "setup-clojure.el")
-
 ;; web-mode config for js, jsx, php, tpl, twig.
 (load "setup-web-mode.el")
 
@@ -152,28 +124,7 @@
 ;; SQL
 (load "setup-sql.el")
 
-;; Thrift
-(load "setup-thrift.el")
-
-;; Groovy / Jenkins pipeline
-(load "setup-groovy.el")
-
 ;; Octave / matlab
 (load "setup-octave.el")
 
-;; Go
-(load "setup-go.el")
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (yaml-mode web-mode thrift tagedit smex scss-mode scala-mode rainbow-delimiters puppet-mode projectile php-mode paredit markdown-mode+ magit ido-ubiquitous go-mode github-browse-file exec-path-from-shell clojure-mode-extra-font-locking cider apache-mode))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+

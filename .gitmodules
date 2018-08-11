@@ -1,0 +1,3 @@
+[submodule "lib/projectile"]
+	path = lib/projectile
+	url = https://github.com/bbatsov/projectile.git
