@@ -51,6 +51,8 @@
 
     github-browse-file
     web-mode
+    go-mode
+    kotlin-mode
     markdown-mode+
     yaml-mode
     scss-mode))
