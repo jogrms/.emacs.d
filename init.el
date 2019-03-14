@@ -52,6 +52,7 @@
     github-browse-file
     web-mode
     go-mode
+    thrift
     kotlin-mode
     markdown-mode+
     yaml-mode
